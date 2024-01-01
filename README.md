@@ -1,0 +1,2 @@
+# the_shop
+react_django_postgres_redis
