@@ -27,36 +27,45 @@ const Order = () => {
 
     useEffect(() => {
       // Fetch products from API
-      setIsLoading(true);
-      fetch(`http://127.0.0.1:8000/api/customers/${orders.customer_id}/`)
+      if (typeof orders.customer_id !== 'undefined') {
+        setIsLoading(true);
+        fetch(`http://127.0.0.1:8000/api/customers/${orders.customer_id}/`)
           .then(response => response.json())
-          .then(data => {setCustomers(data);
-          setIsLoading(false);})
+          .then(data => {
+            setCustomers(data);
+            setIsLoading(false);
+          })
           .catch(error => console.log(error));
+      }
   }, [orders.customer_id]);
 
     useEffect(() => {
     // Fetch products from API
       setIsLoading(true);
+
       fetch(`http://127.0.0.1:8000/api/order_details/`)
           .then(response => response.json())
           .then(data => {
-            setOrderDetails(data.find(ord => ord.order_id === parseInt(order_id)));
+            setOrderDetails(data.find(ord => ord.order_id === parseInt(order_id)+10247));
             setIsLoading(false);
           })
           .catch(error => console.log(error));
     }, []);
-
     useEffect(() => {
         // Fetch products from API
+      if (typeof order_details.product_id !== 'undefined') {
+
         setIsLoading(true);
         fetch(`http://127.0.0.1:8000/api/products/${order_details.product_id}/`)
             .then(response => response.json())
             .then(data => {setProducts(data);
             setIsLoading(false);})
             .catch(error => console.log(error));
+      }
     }, [order_details.product_id]);
-    
+
+
+
   return (
     
     isLoading ? 
