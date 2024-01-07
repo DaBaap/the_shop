@@ -8,3 +8,4 @@ react_django_postgres_redis
 
 # Docker
 Just run `docker-compose up -d` 
+Go to `localhost:3000`
