@@ -1,3 +1,11 @@
+CREATE TABLE public.products (
+	product_id serial4 NOT NULL,
+	product_name varchar(255) NULL,
+	category_id int4 NULL,
+	unit varchar(255) NULL,
+	price numeric(10, 2) NULL,
+	CONSTRAINT products_pkey PRIMARY KEY (product_id)
+);
 INSERT INTO public.products (product_name,category_id,unit,price) VALUES
 	 ('Chais',1,'10 boxes x 20 bags',18.00),
 	 ('Chang',1,'24 - 12 oz bottles',19.00),

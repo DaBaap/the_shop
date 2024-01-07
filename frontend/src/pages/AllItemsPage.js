@@ -14,7 +14,7 @@ const ItemsPage = ( ) => {
     
     useEffect(() => {
         // Fetch products from API
-        fetch('http://localhost:8000/api/products')
+        fetch('http://127.0.0.1:8000/api/products')
             .then(response => response.json())
             .then(data => setItems(data))
             .catch(error => console.log(error));
@@ -22,7 +22,7 @@ const ItemsPage = ( ) => {
 
     useEffect(() => {
         // Fetch products from API
-        fetch('http://localhost:8000/api/categories')
+        fetch('http://127.0.0.1:8000/api/categories/')
             .then(response => response.json())
             .then(data => setCategories(data))
             .catch(error => console.log(error));

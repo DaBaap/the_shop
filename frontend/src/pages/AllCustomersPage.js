@@ -18,7 +18,7 @@ const CustomersPage = () => {
     useEffect(() => {
         // Fetch products from API
         setIsLoading(true);
-        fetch('http://localhost:8000/api/customers')
+        fetch('http://127.0.0.1:8000/api/customers/')
             .then(response => response.json())
             .then(data => {setCustomers(data);
             setIsLoading(false);})

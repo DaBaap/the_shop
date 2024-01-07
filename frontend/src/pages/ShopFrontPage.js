@@ -12,7 +12,7 @@ const ShopFrontPage = () => {
     useEffect(() => {
         setIsLoading(true);
         // Fetch categories from API
-        fetch('http://localhost:8000/api/categories')
+        fetch('http://127.0.0.1:8000/api/categories/')
             .then(response => response.json())
             .then(data => {
                 setCategories(data);

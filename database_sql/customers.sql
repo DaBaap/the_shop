@@ -1,3 +1,14 @@
+CREATE TABLE public.customers (
+	customer_id serial4 NOT NULL,
+	customer_name varchar(255) NULL,
+	contact_name varchar(255) NULL,
+	address varchar(255) NULL,
+	city varchar(255) NULL,
+	postal_code varchar(255) NULL,
+	country varchar(255) NULL,
+	CONSTRAINT customers_pkey PRIMARY KEY (customer_id)
+);
+
 INSERT INTO public.customers (customer_name,contact_name,address,city,postal_code,country) VALUES
 	 ('Alfreds Futterkiste','Maria Anders','Obere Str. 57','Berlin','12209','Germany'),
 	 ('Ana Trujillo Emparedados y helados','Ana Trujillo','Avda. de la Constitucion 2222','Mexico D.F.','05021','Mexico'),

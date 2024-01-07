@@ -1,3 +1,9 @@
+CREATE TABLE public.orders (
+	order_id serial4 NOT NULL,
+	customer_id int4 NULL,
+	order_date date NULL,
+	CONSTRAINT orders_pkey PRIMARY KEY (order_id)
+);
 INSERT INTO public.orders (customer_id,order_date) VALUES
 	 (90,'2021-07-04'),
 	 (81,'2021-07-05'),

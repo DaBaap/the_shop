@@ -14,7 +14,7 @@ const ItemPage = () => {
     const [product, setProduct] = useState(null);
 
     useEffect(() => {
-        fetch(`http://localhost:8000/api/products/${product_id}`)
+        fetch(`http://127.0.0.1:8000/api/products/${product_id}/`)
             .then(response => response.json())
             .then(data => {
                 setProduct(data);

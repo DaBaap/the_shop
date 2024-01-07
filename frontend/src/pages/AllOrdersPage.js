@@ -24,7 +24,7 @@ const Orders = () => {
         // Fetch products from API
         setIsLoading(true);
 
-        fetch('http://localhost:8000/api/orders')
+        fetch('http://127.0.0.1:8000/api/orders/')
             .then(response => response.json())
             .then(data => {setOrders(data);
             setIsLoading(false);})
@@ -34,7 +34,7 @@ const Orders = () => {
     useEffect(() => {
         // Fetch products from API
         setIsLoading(true);
-        fetch('http://localhost:8000/api/customers')
+        fetch('http://127.0.0.1:8000/api/customers/')
             .then(response => response.json())
             .then(data => {setCustomers(data);
             setIsLoading(false);})
